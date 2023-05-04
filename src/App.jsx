@@ -1,3 +1,4 @@
+import { Header } from './Components/Header'
 import { Post } from './Post'
 
 export
@@ -5,6 +6,7 @@ export
   return (
     <>
     <h1>Hello World!</h1>
+    <Header />
     <Post
       author="Arthur Bertoti"
       date="2023-05-04"
