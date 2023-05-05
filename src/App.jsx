@@ -1,23 +1,31 @@
-import { Header } from './Components/Header'
-import { Post } from './Post'
+import { Header } from './components/Header'
+import { Post } from './components/Post'
+import { Sidebar } from './components/Sidebar'
 
-export
- function App() {
+import './global.css'
+import styles from './App.module.css'
+
+export function App() {
   return (
     <>
-    <h1>Hello World!</h1>
-    <Header />
-    <Post
-      author="Arthur Bertoti"
-      date="2023-05-04"
-      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
-    />
-    <Post
-      author="Gabriel"
-      date="2023-05-04"
-      content="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+      <Header />
+      <div className={styles.wrapper}>
+        <Sidebar />
+        <main>
 
-    />
+          <Post
+            author="Arthur Bertoti"
+            date="2023-05-04"
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+          />
+          <Post
+            author="Gabriel"
+            date="2023-05-04"
+            content="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+
+          />
+        </main>
+      </div>
     </>
   )
 }
